@@ -1,12 +1,20 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import './item.scss'
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { removeGoal } from '../../reducers/goalsSlice';
+import { removeTask } from '../../reducers/tasksSlice';
 
 function Item(props) {
+
+  const option = useSelector((state)=>state.option.value);
   const dispatch=useDispatch();
-  const handleRemoveGoal =()=>{
+
+  const handleRemoveGoal =(e)=>{
+    e.preventDefault();
+    if(option === 'tasks')
+    dispatch(removeTask({name: props.name}));
+    else
     dispatch(removeGoal({ name: props.name }));
   };
 

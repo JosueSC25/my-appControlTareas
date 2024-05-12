@@ -19,4 +19,4 @@ Actualizacion 1.1
 10. para obtener los resultados esperados, primero se debe inicializar el backend
 11. agregar 1  tarea y 1 meta desde postman
 12. al inicalizar este proyecto se hara una peticion GET automaticamente y se mostrara en pantalla las tareas creadas
-desde el postman
+desde el postman.

@@ -20,3 +20,9 @@ Actualizacion 1.1
 11. agregar 1  tarea y 1 meta desde postman
 12. al inicalizar este proyecto se hara una peticion GET automaticamente y se mostrara en pantalla las tareas creadas
 desde el postman.
+
+Actualizacion 1.2
+13. Se crea el archivo Dockerfile
+14. Primero se utiliza la imagen de node 20 como builder y la imagen de nginx como servidor
+15. para crear la imagen de nuestro proyecto usamos el siguiente comando: docker build -t docker-react-image:1.0 .
+16. ya teniendo creada la imagen la podemos correr con el siguiente comando: run -p 4000:80 --name docker-react-container docker-react-image:1.0
